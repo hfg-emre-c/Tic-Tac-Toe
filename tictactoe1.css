@@ -1,0 +1,146 @@
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+}
+
+.spielfeld {
+    width: 750px;
+    height: 750px;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gewinnausgabe {
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.fontstyle1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(29, 29, 29);
+    font-size: 100px;
+}
+
+.fontstyle2 {
+    font-family: monospace;
+    color: rgb(29, 29, 29);
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 20%;
+    padding-right: 20px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+}
+
+
+/* reset input */
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+.test {
+    margin: 0 auto;
+    height: 100px;
+    width: 50%;
+    align-items: center;
+    display: flex;
+}
+
+.margin0 {
+    margin: 0 auto;
+}
+
+.testbutton {
+    border: 2px solid linear-gradient(to right, #11998e, #38ef7d);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.newstart {
+    border: 10px solid linear-gradient(to right, #11998e, #38ef7d);
+    background-color: linear-gradient(to right, #38ef7d);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}

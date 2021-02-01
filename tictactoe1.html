@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tictactoe1.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+</head>
+
+<body>
+
+    <h1 class="fontstyle1"> TicTacToe</h1>
+    <h2 class="fontstyle2">Zum spielen bitte abwechselnd die Felder anklicken </h2><br>
+
+    <div class="test">
+        <div class="form__group field margin0">
+            <input size="22%" type="input" class="form__field" placeholder="Spieler X" name="Spieler X" type="text" id="player1" required /><br><br>
+            <label for="Spieler X" class="form__label">Spieler x</label>
+            <div id="zaehler1">Punktestand</div>
+        </div>
+        <div class="form__group field margin0">
+            <input size="22%" type="input" class="form__field" placeholder="Spieler o" name="Spieler X" type="text" id="player2" required /> <br><br>
+            <label for="Spieler X" class="form__label">Spieler O</label>
+            <div id="zaehler2">Punktestand</div>
+        </div>
+    </div>
+    <br><br>
+    <br><button class="testbutton" id="namebest" onclick="changeplayername()">Spielernamen bestätigen</button>
+    <br>
+    <div id="rundenzaehlerid"></div>
+    <br>
+    <div id="update"></div>
+    <br>
+
+    <div id="gewinnausgabe" class="gewinnausgabe"></div>
+    <br>
+
+    <br><br>
+    <button type="button" id="myButton" disabled>Wieviele Symbole zum Win eingeben</button>
+    <input type="number" id="winsize">
+    <br>
+    <br/>
+    <button type="button" id="myButton" disabled>Spielfeldgröße n x n bestimmen</button>
+    <input type="number" id="groeße" value="0" />
+    <button onclick="generate()" id="erstellen">erstellen</button>
+    <br><br>
+
+    <table class="center"></table>
+    <br><br>
+
+    <button disabled id="buttondown" class="newstart" onclick="location.href='tictactoe1.html'">NEUES SPIEL STARTEN</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="tictactoe1.js"></script>
+</body>
+
+</html>

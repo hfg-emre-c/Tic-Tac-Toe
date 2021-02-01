@@ -12,8 +12,9 @@ let player2name = "";
 let player1counter = 0;
 let player2counter = 0;
 let round = 0;
-let status = [];
-
+/* jsHint ignore:start */
+let spielfeldstatus = [];
+/*jshint ignore:end */
 function buttonaktivieren() {
     document.getElementById("buttondown").disabled = false;
 }
@@ -91,7 +92,7 @@ function generate() {
         $("table").append("<tr id=" + newId + "></tr>");
         console.log("erstelle table")
 
-        status[i] = []; //erzeugt neue Zeile
+        spielfeldstatus[i] = []; //erzeugt neue Zeile
 
         for (let j = 0; j < Spielfeldgröße; j++) {
             let idvar = String(i) + "-" + String(j)
@@ -99,7 +100,7 @@ function generate() {
             counter++;
             console.log("erstelle table ")
 
-            status[i][j] = " ";
+            spielfeldstatus[i][j] = " ";
         }
 
     }
@@ -121,7 +122,7 @@ $("table").on("click", "td", function() {
         let y = Number($(this).attr("id").split("-")[1]);
 
         //xy vom aktuellem spieler wird abgerufen
-        status[x][y] = currentPlayer;
+        spielfeldstatus[x][y] = currentPlayer;
 
         $(this).text(currentPlayer);
         console.log($(this).text());
@@ -179,8 +180,8 @@ function wincheckhorizontalvertical() {
         horizontal = "";
         vertikal = "";
         for (let t = 0; t < Spielfeldgröße; t++) {
-            horizontal += status[i][t];
-            vertikal += status[t][i];
+            horizontal += spielfeldstatus[i][t];
+            vertikal += spielfeldstatus[t][i];
         }
         if (horizontal.includes(victoryOne) || vertikal.includes(victoryOne)) {
             gewinnanzeige();
@@ -212,7 +213,7 @@ function wincheckquer() {
             if (i + (symbolzahl - 1) < Spielfeldgröße) {
                 if (h + (symbolzahl - 1) < Spielfeldgröße) {
                     for (let m = 0; m < symbolzahl; m++) {
-                        diagonalEins += status[i + m][h + m];
+                        diagonalEins += spielfeldstatus[i + m][h + m];
                     }
                     if (diagonalEins.includes(victoryOne)) {
                         gewinnanzeige();
@@ -234,7 +235,7 @@ function wincheckquer() {
             if (h - (symbolzahl - 1) >= 0) {
                 if (i + (symbolzahl - 1) < Spielfeldgröße) {
                     for (let m = 0; m < symbolzahl; m++) {
-                        diagonalZwei += status[i + m][h - m];
+                        diagonalZwei += spielfeldstatus[i + m][h - m];
                     }
                     if (diagonalZwei.includes(victoryOne)) {
                         gewinnanzeige();

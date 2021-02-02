@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <h1 class="fontstyle1"> TicTacToe</h1>
     <h2 class="fontstyle2">Zum spielen bitte abwechselnd die Felder anklicken </h2><br>
 
@@ -26,25 +25,29 @@
             <div id="zaehler2">Punktestand</div>
         </div>
     </div>
-    <br><br>
-    <br><button class="testbutton" id="namebest" onclick="changeplayername()">Spielernamen bestätigen</button>
+
+    <br>
+    <button class="testbutton" id="namebest" onclick="changeplayername(); active()">Spielernamen bestätigen</button>
     <br>
     <div id="rundenzaehlerid"></div>
     <br>
     <div id="update"></div>
     <br>
-
     <div id="gewinnausgabe" class="gewinnausgabe"></div>
     <br>
+    <div class="test">
+        <div class="form__group field margin0">
+            <input type="number" id="winsize" style="text-align: center;" size="22%" type="input" class="form1__field" placeholder="anzahlsymbole" name="anzahlsymbole" required /><br><br>
+            <label for="anzahlsymbole" class="form__label">Anzahl der Symbole zum WIN</label>
+        </div>
+        <div class="form__group field margin0">
+            <input type="number" id="groeße" style="text-align: center;" size="22%" type="input" class="form1__field" placeholder="Spielfeldgröße N x N eingeben" name="anzahlsymbole" required /><br><br>
+            <label for="anzahlsymbole" class="form__label">Spielfeldgröße N x N eingeben</label>
 
-    <br><br>
-    <button type="button" id="myButton" disabled>Wieviele Symbole zum Win eingeben</button>
-    <input type="number" id="winsize">
-    <br>
-    <br/>
-    <button type="button" id="myButton" disabled>Spielfeldgröße n x n bestimmen</button>
-    <input type="number" id="groeße" value="0" />
-    <button onclick="generate()" id="erstellen">erstellen</button>
+        </div>
+    </div>
+    <button disabled class="testbutton" id="erstellen" onclick="generate()">Spielfeld erstellen</button>
+
     <br><br>
 
     <table class="center"></table>

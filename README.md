@@ -18,6 +18,7 @@ Man erhält die Anweisungen via Pop-Up. Weiterhin wird angezeigt, wer gerade am 
 
 
 * buttonaktiviere.(): aktiviert den Button für ein Neues Spiel unten im Bereich
+* active(): aktiviert den Button "Spielfeld erstellen" sobald die Spielernamen bestätigt wurden
 * Spielfeldgröße: wird am anfang vom Spiel angegeben
 * changepplayername(): Ändert ausgaben in HTML, gibt ein PopUp aus und deaktiviert die input Felder von namen
 * changetext(): wechselt den Text wer aktuell am Zug ist

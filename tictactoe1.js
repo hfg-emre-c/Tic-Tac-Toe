@@ -1,4 +1,4 @@
-alert("Bitte erst namen festlegen, Spielfeldgröße bestimmen und dann erst den Button zum erstellen betätigen!!");
+alert("Bitte erst eure Namen festlegen, die Symbolanzahl zum WIN eingeben, Spielfeldgröße bestimmen und dann erst den Button Spielfeld erstellen betätigen!!");
 let Spielfeldgröße = "";
 
 let currentPlayer = "X";
@@ -12,16 +12,21 @@ let player2name = "";
 let player1counter = 0;
 let player2counter = 0;
 let round = 0;
-/* jsHint ignore:start */
 let spielfeldstatus = [];
-/*jshint ignore:end */
+
 function buttonaktivieren() {
     document.getElementById("buttondown").disabled = false;
+}
+
+//wird in html bei der bestätigung von Spielernamen freigegeben sodass man davor kein Spielfeld generieren kann
+function active() {
+    document.getElementById("erstellen").disabled = false;
 }
 //wird in HTML ausgeführt und ändert bzw fügt die namen hinzu
 //gibt PopUp's mit "Spielernamen wurden festgelegt", "Spieler Y ist X", "Spieler X ist O"
 /*jshint ignore:start */
 function changeplayername() {
+
     player1name = document.getElementById("player1").value;
     document.getElementById("player1").disabled = true;
     player2name = document.getElementById("player2").value;

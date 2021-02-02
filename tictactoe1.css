@@ -87,7 +87,7 @@ body {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image: linear-gradient(to right, #003f3a, #d3d3d3);
     border-image-slice: 1;
 }
 
@@ -97,7 +97,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #11998e;
+    color: #003f3a;
     font-weight: 700;
 }
 
@@ -143,4 +143,70 @@ a:visited {
 a:link {
     color: black;
     text-decoration: none;
+}
+
+.form1__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 20%;
+    padding-right: 20px;
+}
+
+.form1__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form1__field::placeholder {
+    color: transparent;
+}
+
+.form1__field:placeholder-shown~.form__label {
+    font-size: 1.1rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form1__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form1__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #003f3a, #d3d3d3);
+    border-image-slice: 1;
+}
+
+.form1__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #003f3a;
+    font-weight: 700;
+}
+
+
+/* reset input */
+
+.form1__field:required,
+.form1__field:invalid {
+    box-shadow: none;
 }
